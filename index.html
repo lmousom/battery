@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Info</title>
+    <script src="battery-core.js"></script>
+    <script src="battery.js"></script>
+</head>
+
+<body>
+    <battery-info id="elem"></battery-info>
+
+    <script>
+        elem.addEventListener('plug-me', event => console.log(event.detail));
+    </script>
+</body>
+
+</html>
