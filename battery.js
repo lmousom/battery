@@ -19,7 +19,7 @@ class Battery extends HTMLElement {
 
     update() {
         navigator.getBattery().then((battery) => {
-            this.percentage = `${Math.abs(battery.level * 100)} %` || undefined
+            this.percentage = `${Math.floor(battery.level * 100)} %` || undefined
         })
         this.batteryElem.setAttribute('percentage', this.percentage);
         this.dispatchEvent(new CustomEvent('plug-me', { detail: this.percentage }));

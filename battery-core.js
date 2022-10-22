@@ -3,7 +3,7 @@ class BatteryCore extends HTMLElement {
     render() {
         let percentage;
         navigator.getBattery().then((battery) => {
-            percentage = `${Math.abs(battery.level * 100)} %` || undefined
+            percentage = `${Math.floor(battery.level * 100)} %` || undefined
             this.innerHTML = percentage
         })
 
